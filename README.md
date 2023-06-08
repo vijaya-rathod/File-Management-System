@@ -35,7 +35,7 @@ def create_file():
     with open(filename, 'w') as file:
         file.write(filecontent)
  ```
-The time complexity of this function is O(1) because it has a constant number of operations, regardless of the size of the input. The function takes input from the user and writes it to a file using the `open()` and `write()` functions. These operations take a constant amount of time, regardless of the length of the input. Therefore, the time complexity of this function is constant.
+The time complexity of this function is O(1) because it has a constant number of operations, regardless of the size of the input. The function takes input from the user and writes it to a file using the 'open()' and 'write()' functions.
 
 ## Directory creation
 ### Users can create new directories and organize files within them.
@@ -57,7 +57,7 @@ def create_directory():
                 shutil.move(file, new_dir)
                 print(file, "moved to", new_dir)
  ```
- The time complexity of this function is O(n), where n is the number of files in the current directory. The function first creates a new directory, which takes a constant amount of time, regardless of the number of files in the directory. Next, the function obtains a list of all files in the current directory using 'os.listdir()'. This operation takes O(n) time, where n is the number of files in the directory. Then, the function iterates over each file in the directory and checks if it is a file and ends with ".txt". This operation takes a constant amount of time for each file, so the total time complexity for this part of the function is O(n). Finally, for each file that meets the criteria, the function moves it to the new directory using `shutil.move()`. This operation also takes a constant amount of time for each file, so the total time complexity for this part of the function is also O(n). Therefore, the overall time complexity of the function is O(n)
+ The time complexity of this function is O(n), where n is the number of files in the current directory. The function first creates a new directory and obtains a list of all files in the current directory using 'os.listdir()'. This operation takes O(n) time, where n is the number of files in the directory. Then, the function iterates over each file in the directory and checks if it is a file and ends with ".txt". Finally, for each file that meets the criteria, the function moves it to the new directory using 'shutil.move()'.The overall time complexity of the function is O(n)
  
  
  ## Search files
@@ -79,7 +79,7 @@ def create_directory():
     for k in matching_files:
         print(k)        
  ```
- The time complexity of this function is O(n* m), where n is the number of files and directories in the search_directory and m is the size of the largest file in the directory. The function first initializes an empty list called `matching_files`, which takes constant time. Then, the function uses `os.walk()` to traverse the directory tree rooted at `search_directory`. This operation takes O(n) time, where n is the number of files and directories in the tree. For each file in the directory tree, the function checks if the search term is in the filename. This operation takes constant time. If the search term is in the filename, the function appends the file path to the `matching_files` list. If the search term is not in the filename, the function reads the file and checks if the search term is in the file contents. This operation takes O(m) time, where m is the size of the file. If the search term is in the file contents, the function appends the file path to the `matching_files` list. Finally, the function prints all the file paths in the `matching_files` list, which takes O(n) time, where n is the number of matching files. Therefore, the overall time complexity of the function is O(n* m).
+ The time complexity of this function is O(n* m), where n is the number of files and directories in the search_directory and m is the size of the largest file in the directory. The function first initializes an empty list called 'matching_files'. Then, the function uses 'os.walk()' to traverse the directory tree rooted at 'search_directory'. This operation takes O(n) time, where n is the number of files and directories in the tree. For each file in the directory tree, the function checks if the search term is in the filename. If the search term is in the filename, the function appends the file path to the 'matching_files' list. If the search term is not in the filename, the function reads the file and checks if the search term is in the file contents. This operation takes O(m) time, where m is the size of the file. If the search term is in the file contents, the function appends the file path to the 'matching_files' list. Finally, the function prints all the file paths in the 'matching_files' list, which takes O(n) time, where n is the number of matching files. Therefore, the overall time complexity of the function is O(n* m).
  
  
  ## File deletion
