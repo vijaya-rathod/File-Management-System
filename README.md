@@ -18,11 +18,11 @@ import os
 import shutil
 import datetime
 ```
-os: This library provides a way of interacting with the operating system. You can use it to perform various operations like create, rename or delete files and directories, get information about a file, list the contents of a directory, etc.
+os: This library provides a way of interacting with the operating system. We can use it to perform various operations like create, rename or delete files and directories, get information about a file, list the contents of a directory, etc.
 
-shutil: This library provides high-level operations on files and collections of files. You can use it to copy, move, rename, or delete files and directories.
+shutil: This library provides high-level operations on files and collections of files. We can use it to copy, move, rename, or delete files and directories.
 
-datetime: This library provides classes for working with dates and times. You can use it to get the current date and time, format dates and times, perform arithmetic on dates and times, etc.
+datetime: This library provides classes for working with dates and times. We can use it to get the current date and time, format dates and times, perform arithmetic on dates and times, etc.
 
 ## File creation
 ### Users can create new files and provide them with a name and content.
